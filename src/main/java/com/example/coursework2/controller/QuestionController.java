@@ -27,7 +27,7 @@ public class QuestionController {
         return questionService.remove(new Question(question, answer));
     }
 
-    @GetMapping("/remove")
+    @GetMapping("/add")
     public Collection<Question> getQuestion(){
         return questionService.getAll();
     }

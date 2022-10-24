@@ -18,7 +18,7 @@ public class JavaQuestionServiceTest {
     }
 
     @Test
-    public void addTest(){
+    public void TestAddPositiveAndNegativeQuestion(){
         assertThat(questionService.getAll()).isEmpty();
         Question expected = add(new Question("q1", "a1" ));
         questionService.add("q1", "a1");
@@ -31,7 +31,7 @@ public class JavaQuestionServiceTest {
     }
 
     @Test
-    public void removeTest(){
+    public void removePositiveAndNegativeQuestionTest(){
         assertThat(questionService.getAll().isEmpty());
         assertThatExceptionOfType(QuestionNotFoundException.class)
                 .isThrownBy(() ->questionService.remove(new Question("test", "test")));
